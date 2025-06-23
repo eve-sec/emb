@@ -8,8 +8,8 @@ node_bin=/home/raph/.nvm/versions/node/v22.2.0/bin/node
 export ESI_CACHE=$emb_dir/apps/website/esi-cache
 export NODE_ENV=production
 
-cd $emb_dir/apps/prometheus
-./prometheus --config.file=./prometheus.yml &>> $emb_dir/prometheus.log &
+cd $emb_dir/apps/victoriametrics
+./victoria-metrics-prod --promscrape.config=./prometheus.yml &>> $emb_dir/victoria.log &
 
 cd $emb_dir/apps/store
 ./store &>> $emb_dir/store.log &

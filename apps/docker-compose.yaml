@@ -34,20 +34,17 @@ services:
     environment:
       - "ESI_CACHE=/esi-cache"
 
-#  prometheus:
-#    image: prom/prometheus:latest
-#    restart: no
-#    ports:
-#      - "9090:9090"
-#      - "2112:2112"
-#    volumes:
-#      - ./prometheus/prometheus.yml:/etc/prometheus.yml
-#      - ./prometheus/data:/prometheus
-#    command:
-#      - '--config.file=/etc/prometheus/prometheus.yml'
-#      - '--storage.tsdb.path=/prometheus'
-#      - '--web.console.libraries=/usr/share/prometheus/console_libraries'
-#      - '--web.console.templates=/usr/share/prometheus/consoles'
+
+  victoria-metrics:
+    image: victoriametrics/victoria-metrics:latest
+    restart: no
+    ports:
+      - "8428:8428"
+    volumes:
+      - ./victoriametrics/prometheus.yml:/etc/prometheus.yml
+      - ./victoriametrics/data:/victoria-metrics-data
+    command:
+      - '--promscrape.config=/etc/prometheus.yml'
 
   grafana:
     image: grafana/grafana:latest
