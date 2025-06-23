@@ -1,5 +1,5 @@
 [Unit]
-Description=Eve Market Browser Server
+Description=Jita.Market Server
 After=network.target
 
 [Service]

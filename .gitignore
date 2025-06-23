@@ -1,8 +1,15 @@
 .DS_Store
-
+.idea
 node_modules
 
 data.db
 data.db-*
 
 *.log
+
+# Project data
+apps/esi-cache
+apps/grafana/data
+apps/static-store/package-lock.json
+apps/website/package-lock.json
+docker/*.tar

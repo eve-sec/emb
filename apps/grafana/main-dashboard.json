@@ -15,7 +15,7 @@
       }
     ]
   },
-  "description": "Eve Market Browser Main Dashboard",
+  "description": "Jita.Market Main Dashboard",
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
@@ -703,8 +703,8 @@
   },
   "timepicker": {},
   "timezone": "browser",
-  "title": "Main Dashboard",
-  "uid": "aduse4nezfe2ob",
+  "title": "Jita.Market Dashboard",
+  "uid": "jita-market-dash",
   "version": 10,
   "weekStart": ""
 }

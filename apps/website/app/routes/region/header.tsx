@@ -55,8 +55,8 @@ export default function Header({ regions }: HeaderProps) {
     <>
       <header className="header header--desktop">
         <Link to="/" className="header__title-link">
-          <img className="header__logo" src={logo} alt="eve market browser logo" />
-          <h1 className="header__title">EVE Market Browser</h1>
+          <img className="header__logo" src={logo} alt="Jita.Market logo" />
+          <h1 className="header__title">Jita.Market</h1>
         </Link>
         
         <ul className="header__nav">
@@ -86,8 +86,8 @@ export default function Header({ regions }: HeaderProps) {
 
       <header className="header header--mobile">
         <Link to="/" className="header__title-link">
-          <img className="header__logo" src={logo} alt="eve market browser logo" />
-          <h1 className="header__title">EVE Market Browser</h1>
+          <img className="header__logo" src={logo} alt="Jita.Market logo" />
+          <h1 className="header__title">Jita.Market</h1>
         </Link>
 
         <button onClick={() => isDropdownOpen ? closeDropdown() : openDropdown()} className="header__trigger">

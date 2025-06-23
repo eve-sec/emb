@@ -1,0 +1,76 @@
+version: '3.7'
+
+services:
+
+  store:
+    image: x07/emb-backend:latest
+    restart: always
+    ports:
+      - "7562:7562"
+    volumes:
+      - ./esi-cache:/esi-cache
+      - ./data.db:/root/data.db
+    environment:
+      - "ESI_CACHE=/esi-cache"
+
+  website:
+    image: x07/emb-frontend:latest
+    restart: always
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./website/public/icons:/app/public/icons
+      - ./esi-cache:/esi-cache
+    environment:
+      - "ESI_CACHE=/esi-cache"
+      - "API_HOST=10.100.0.248"
+      - "API_PORT=7562"
+
+  static-store:
+    image: x07/emb-static-store:latest
+    restart: no
+    volumes:
+      - ./esi-cache:/esi-cache
+    environment:
+      - "ESI_CACHE=/esi-cache"
+
+  update-icon:
+    image: x07/emb-update-icon:latest
+    restart: no
+    volumes:
+      - ./website/public/icons:/icons
+    environment:
+      - "ICONS_EXPORT=https://web.ccpgamescdn.com/aws/developers/Uprising_V21.03_Icons.zip"
+      - "ICONS_PATH=/icons"
+
+  prometheus:
+    image: prom/prometheus:latest
+    restart: no
+    ports:
+      - "9090:9090"
+      - "2112:2112"
+    volumes:
+      - ./prometheus/prometheus.yml:/etc/prometheus.yml
+      - ./prometheus/data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/usr/share/prometheus/console_libraries'
+      - '--web.console.templates=/usr/share/prometheus/consoles'
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    ports:
+      - "3001:3000"
+    volumes:
+      - ./grafana/data:/var/lib/grafana
+      - ./grafana/main-dashboard.json:/var/lib/grafana/dashboards/main-dashboard.json
+      - ./grafana/provisioning:/etc/grafana/provisioning
+    environment:
+      - GF_AUTH_ANONYMOUS_ENABLED=true
+      - GF_AUTH_ANONYMOUS_ORG_ROLE=Viewer
+    restart: unless-stopped
+    logging:
+      driver: none
+    user: "472"

@@ -12,10 +12,10 @@ import "@scss/about.scss"
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "About - EVE Market Browser" },
+    { title: "About - Jita.Market" },
     { name: "description", content: "Contact informations and Github repository" },
     { property: "og:type", content: "website" },
-    { property: "og:image", content: "https://evemarketbrowser.com/thumbnail.png" }
+    { property: "og:image", content: "https://jita.market/thumbnail.png" }
   ]
 }
 
@@ -27,22 +27,21 @@ export default function About() {
       <main className="about">
         <section className="about__feedback">
           <p>This site is currently under active development. If you have any feedback, please let me know.</p>
-          <p>I created a <a href="https://discord.gg/mTrd3XQvgv">discord server</a> for feedback and bug reports.</p>
+          <p>I created a telegram group <a href="https://t.me/+M96uaH6JzBI4Njgy">jita_market</a> for feedback and bug reports.</p>
         </section>
         <section className="about__contact">
           <h2>Contact Informations</h2>
           <p>
-            In-game name : Raph Toulouse<br/>
-            Email : <a href="mailto:raphguyader@gmail.com">raphguyader@gmail.com</a><br/>
-            Discord : raph_5#0989<br/>
-            My killboard 😛 : <a href="https://zkillboard.com/character/2113183745/">zkillborad</a>
+            In-game name : Jita 4-4 Citizen<br/>
+            Email : <a href="mailto:vv@x07.it">x07.it</a><br/>
+            My killboard 😛 : <a href="https://zkillboard.com/character/2117906432/">zkillborad</a>
           </p>
         </section>
 
         <section className="about__github">
-          <h2>Source Code</h2>
+          <h2>Based on</h2>
           <p>
-            All the source code for this projet available under the MIT license on <a href="https://github.com/raph5/eve-market-browser">github</a>.
+            The project is based on EMB sources codes at <a href="https://github.com/raph5/eve-market-browser">github</a>.
           </p>
         </section>
 
