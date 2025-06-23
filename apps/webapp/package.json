@@ -1,0 +1,11 @@
+{
+  "name": "emb-webapp",
+  "type": "module",
+  "scripts": {
+    "build": "npx golte"
+  },
+  "dependencies": {
+    "golte": "^0.1.2",
+    "svelte": "^4.2.0"
+  }
+}
