@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/raph5/eve-market-browser/apps/store/lib/esi"
+	"github.com/eve-sec/emb/apps/store/lib/esi"
 )
 
 type nameAndId struct {

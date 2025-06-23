@@ -8,8 +8,8 @@ import (
 	"log"
 	"time"
 
-	"github.com/raph5/eve-market-browser/apps/store/items/activemarkets"
-	"github.com/raph5/eve-market-browser/apps/store/lib/esi"
+	"github.com/eve-sec/emb/apps/store/items/activemarkets"
+	"github.com/eve-sec/emb/apps/store/lib/esi"
 )
 
 const chunkSize = 100

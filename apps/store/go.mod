@@ -1,4 +1,4 @@
-module github.com/raph5/eve-market-browser/apps/store
+module github.com/eve-sec/emb/apps/store
 
 go 1.22.3
 

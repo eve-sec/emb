@@ -10,7 +10,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/raph5/eve-market-browser/apps/store/lib/database"
+	"github.com/eve-sec/emb/apps/store/lib/database"
 )
 
 // orders type that the store will return

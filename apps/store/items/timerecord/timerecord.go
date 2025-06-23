@@ -6,7 +6,7 @@ import (
 	"errors"
 	"time"
 
-	"github.com/raph5/eve-market-browser/apps/store/lib/database"
+	"github.com/eve-sec/emb/apps/store/lib/database"
 )
 
 func Set(ctx context.Context, key string, expTime time.Time) error {

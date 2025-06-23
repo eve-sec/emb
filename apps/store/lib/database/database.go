@@ -13,8 +13,8 @@ import (
 	"time"
 
 	"github.com/VictoriaMetrics/metrics"
+	"github.com/eve-sec/emb/apps/store/lib/victoria"
 	_ "github.com/mattn/go-sqlite3"
-	"github.com/raph5/eve-market-browser/apps/store/lib/victoria"
 )
 
 type DB struct {

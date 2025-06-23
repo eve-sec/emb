@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/raph5/eve-market-browser/apps/store/items/regions"
+	"github.com/eve-sec/emb/apps/store/items/regions"
 )
 
 // NOTE: I tryed two approaches for downloading the orders:

@@ -8,11 +8,11 @@ import (
 	"time"
 
 	"github.com/VictoriaMetrics/metrics"
-	"github.com/raph5/eve-market-browser/apps/store/items/activemarkets"
-	"github.com/raph5/eve-market-browser/apps/store/items/histories"
-	"github.com/raph5/eve-market-browser/apps/store/items/locations"
-	"github.com/raph5/eve-market-browser/apps/store/items/orders"
-	"github.com/raph5/eve-market-browser/apps/store/items/timerecord"
+	"github.com/eve-sec/emb/apps/store/items/activemarkets"
+	"github.com/eve-sec/emb/apps/store/items/histories"
+	"github.com/eve-sec/emb/apps/store/items/locations"
+	"github.com/eve-sec/emb/apps/store/items/orders"
+	"github.com/eve-sec/emb/apps/store/items/timerecord"
 )
 
 var (

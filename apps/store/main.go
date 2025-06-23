@@ -10,10 +10,10 @@ import (
 	"sync"
 	"syscall"
 
-	"github.com/raph5/eve-market-browser/apps/store/items/histories"
-	"github.com/raph5/eve-market-browser/apps/store/items/orders"
-	"github.com/raph5/eve-market-browser/apps/store/lib/database"
-	"github.com/raph5/eve-market-browser/apps/store/lib/victoria"
+	"github.com/eve-sec/emb/apps/store/items/histories"
+	"github.com/eve-sec/emb/apps/store/items/orders"
+	"github.com/eve-sec/emb/apps/store/lib/database"
+	"github.com/eve-sec/emb/apps/store/lib/victoria"
 )
 
 func main() {

@@ -5,8 +5,8 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/raph5/eve-market-browser/apps/store/lib/esi"
-	"github.com/raph5/eve-market-browser/apps/store/lib/security"
+	"github.com/eve-sec/emb/apps/store/lib/esi"
+	"github.com/eve-sec/emb/apps/store/lib/security"
 )
 
 type esiOrder struct {

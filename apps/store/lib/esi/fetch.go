@@ -13,8 +13,8 @@ import (
 	"time"
 
 	"github.com/VictoriaMetrics/metrics"
-	"github.com/raph5/eve-market-browser/apps/store/lib/sem"
-	"github.com/raph5/eve-market-browser/apps/store/lib/victoria"
+	"github.com/eve-sec/emb/apps/store/lib/sem"
+	"github.com/eve-sec/emb/apps/store/lib/victoria"
 )
 
 type EsiError struct {
