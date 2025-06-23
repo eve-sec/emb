@@ -10,6 +10,7 @@ data.db-*
 # Project data
 apps/esi-cache
 apps/grafana/data
+apps/prometheus/*
 apps/static-store/package-lock.json
 apps/website/package-lock.json
 docker/*.tar

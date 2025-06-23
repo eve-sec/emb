@@ -34,29 +34,20 @@ services:
     environment:
       - "ESI_CACHE=/esi-cache"
 
-  update-icon:
-    image: x07/emb-update-icon:latest
-    restart: no
-    volumes:
-      - ./website/public/icons:/icons
-    environment:
-      - "ICONS_EXPORT=https://web.ccpgamescdn.com/aws/developers/Uprising_V21.03_Icons.zip"
-      - "ICONS_PATH=/icons"
-
-  prometheus:
-    image: prom/prometheus:latest
-    restart: no
-    ports:
-      - "9090:9090"
-      - "2112:2112"
-    volumes:
-      - ./prometheus/prometheus.yml:/etc/prometheus.yml
-      - ./prometheus/data:/prometheus
-    command:
-      - '--config.file=/etc/prometheus/prometheus.yml'
-      - '--storage.tsdb.path=/prometheus'
-      - '--web.console.libraries=/usr/share/prometheus/console_libraries'
-      - '--web.console.templates=/usr/share/prometheus/consoles'
+#  prometheus:
+#    image: prom/prometheus:latest
+#    restart: no
+#    ports:
+#      - "9090:9090"
+#      - "2112:2112"
+#    volumes:
+#      - ./prometheus/prometheus.yml:/etc/prometheus.yml
+#      - ./prometheus/data:/prometheus
+#    command:
+#      - '--config.file=/etc/prometheus/prometheus.yml'
+#      - '--storage.tsdb.path=/prometheus'
+#      - '--web.console.libraries=/usr/share/prometheus/console_libraries'
+#      - '--web.console.templates=/usr/share/prometheus/consoles'
 
   grafana:
     image: grafana/grafana:latest
