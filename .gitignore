@@ -14,3 +14,4 @@ apps/prometheus/*
 apps/static-store/package-lock.json
 apps/website/package-lock.json
 docker/*.tar
+RouterOS_Commands.md
