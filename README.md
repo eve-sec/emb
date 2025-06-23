@@ -13,8 +13,8 @@ Go 1.22
 **Configuration:**  
 Set emb_dir and node_bin variables in start.sh
 
-**Prometheus setup:**  
-Run install.sh in apps/prometheus
+**VictoriaMetrics setup:**
+Run install.sh in apps/victoriametrics
 
 **Systemd setup:**  
 Create a /etc/emb folder  
@@ -44,8 +44,8 @@ Build remix app `npm run build`
 
 ## Ports
 
-node: 3000  
-grafana: 3001  
-prometheus: 2112  
-loki: 3100  
-promtial: 9080  
+node: 3000
+grafana: 3001
+victoria-metrics: 8428
+loki: 3100
+promtial: 9080
