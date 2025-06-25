@@ -7,6 +7,7 @@ services:
     restart: always
     ports:
       - "7562:7562"
+      - "2112:2112"
     volumes:
       - ./esi-cache:/esi-cache
       - ./data.db:/root/data.db
@@ -41,10 +42,12 @@ services:
     ports:
       - "8428:8428"
     volumes:
-      - ./victoriametrics/prometheus.yml:/etc/prometheus.yml
+      - ./victoriametrics/prometheus.yml:/etc/victoria/prometheus.yml
       - ./victoriametrics/data:/victoria-metrics-data
     command:
-      - '--promscrape.config=/etc/prometheus.yml'
+      - '--promscrape.config=/etc/victoria/prometheus.yml'
+      - '--storageDataPath=/etc/victoria/data'
+      - '--retentionPeriod=30d'
 
   grafana:
     image: grafana/grafana:latest
